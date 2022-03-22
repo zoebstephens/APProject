@@ -1,0 +1,15 @@
+/Users/zoestephens/Documents/GitHub/APProject/bin/Debug/net5.0/APProject.deps.json
+/Users/zoestephens/Documents/GitHub/APProject/bin/Debug/net5.0/APProject.runtimeconfig.json
+/Users/zoestephens/Documents/GitHub/APProject/bin/Debug/net5.0/APProject.runtimeconfig.dev.json
+/Users/zoestephens/Documents/GitHub/APProject/bin/Debug/net5.0/APProject.dll
+/Users/zoestephens/Documents/GitHub/APProject/bin/Debug/net5.0/ref/APProject.dll
+/Users/zoestephens/Documents/GitHub/APProject/bin/Debug/net5.0/APProject.pdb
+/Users/zoestephens/Documents/GitHub/APProject/obj/Debug/net5.0/APProject.csproj.AssemblyReference.cache
+/Users/zoestephens/Documents/GitHub/APProject/obj/Debug/net5.0/APProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zoestephens/Documents/GitHub/APProject/obj/Debug/net5.0/APProject.AssemblyInfoInputs.cache
+/Users/zoestephens/Documents/GitHub/APProject/obj/Debug/net5.0/APProject.AssemblyInfo.cs
+/Users/zoestephens/Documents/GitHub/APProject/obj/Debug/net5.0/APProject.csproj.CoreCompileInputs.cache
+/Users/zoestephens/Documents/GitHub/APProject/obj/Debug/net5.0/APProject.dll
+/Users/zoestephens/Documents/GitHub/APProject/obj/Debug/net5.0/ref/APProject.dll
+/Users/zoestephens/Documents/GitHub/APProject/obj/Debug/net5.0/APProject.pdb
+/Users/zoestephens/Documents/GitHub/APProject/obj/Debug/net5.0/APProject.genruntimeconfig.cache
