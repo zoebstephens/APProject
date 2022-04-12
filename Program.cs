@@ -5,109 +5,88 @@ namespace APProject
 {
     class Program
     {
+        private static int ix;
         static void Main(string[] args)
         {
             
-
-        }
-
-
-
-        public static List<BreakfastItem> GetBreakfast()
-        {
-            List<BreakfastItem> BreakfastCombo = new List<BreakfastItem>();
-            BreakfastItem bananaBread = new BreakfastItem();
+            List<Food> breakfast = new List<Food>();
+            Food bananaBread = new Food();
             bananaBread.Description = "Delicious Banana Bread";
-            bananaBread.price = 4;
+            bananaBread.price = 4.75M;
+            breakfast.Add(bananaBread);
+
             
-            BreakfastItem waffle = new BreakfastItem();
+            Food waffle = new Food();
             waffle.Description = "Delicious Waffle";
-            waffle.price = 8;
+            waffle.price = 8.60M;
+            breakfast.Add(waffle);
 
-            BreakfastItem cereal = new BreakfastItem();
+            Food cereal = new Food();
             cereal.Description = "Delicious Cereal";
-            cereal.price = 2;
+            cereal.price = 2.50M;
+            breakfast.Add(cereal);
 
-            BreakfastItem pancake = new BreakfastItem();
+            Food pancake = new Food();
             pancake.Description = "Delicious Pancake";
-            pancake.price = 7;
+            pancake.price = 7.80M;
+            breakfast.Add(pancake);
 
-            BreakfastItem bagel = new BreakfastItem();
+            Food bagel = new Food();
             bagel.Description = "Delicious Bagel";
-            bagel.price = 1;
+            bagel.price = 1.99M;
+            breakfast.Add(bagel);
 
-            BreakfastItem croissant = new BreakfastItem();
+            Food croissant = new Food();
             croissant.Description = "Delicious Croissant";
-            croissant.price = 5;
+            croissant.price = 5.99M;
+            breakfast.Add(croissant);
 
-            BreakfastItem oatmeal = new BreakfastItem();
+            Food oatmeal = new Food();
             oatmeal.Description = "Delicious Oatmeal";
-            oatmeal.price = 2;
+            oatmeal.price = 2.75M;
+            breakfast.Add(oatmeal);
 
-            BreakfastItem eggs = new BreakfastItem();
+            Food eggs = new Food();
             eggs.Description = "Delicious Eggs";
-            eggs.price = 3;
+            eggs.price = 3.20M;
+            breakfast.Add(eggs);
 
-            BreakfastItem crepe = new BreakfastItem();
+
+            Food crepe = new Food();
             crepe.Description = "Delicious Crepe";
-            crepe.price = 10;
+            crepe.price = 10.99M;
+            breakfast.Add(crepe);
 
-            BreakfastItem blueberryMuffin = new BreakfastItem();
+            Food blueberryMuffin = new Food();
             blueberryMuffin.Description = "Delicious Blueberry Muffin";
-            blueberryMuffin.price = 6;
+            blueberryMuffin.price = 6.00M;
+            breakfast.Add(blueberryMuffin);
 
-            BreakfastCombo.Add(bananaBread);
-            BreakfastCombo.Add(waffle);
-            BreakfastCombo.Add(cereal);
-            BreakfastCombo.Add(pancake);
-            BreakfastCombo.Add(bagel);
-            BreakfastCombo.Add(croissant);
-            BreakfastCombo.Add(oatmeal);
-            BreakfastCombo.Add(eggs);
-            BreakfastCombo.Add(crepe);
-            BreakfastCombo.Add(blueberryMuffin);
+            // BreakfastCombo.Add(bananaBread);
+            // BreakfastCombo.Add(waffle);
+            // BreakfastCombo.Add(cereal);
+            // BreakfastCombo.Add(pancake);
+            // BreakfastCombo.Add(bagel);
+            // BreakfastCombo.Add(croissant);
+            // BreakfastCombo.Add(oatmeal);
+            // BreakfastCombo.Add(eggs);
+            // BreakfastCombo.Add(crepe);
+            // BreakfastCombo.Add(blueberryMuffin);
     
-
-            foreach(BreakfastItem item in BreakfastCombo)
+            ix = 1;
+            foreach(Food item in breakfast)
             {
-                Console.WriteLine($"{item.Description}");
-            }
-
-            return BreakfastCombo;
-
-        }
-
-        public static int GetDescription(BreakfastItem description)
-        {
-            if (description == null)
-            {
-                throw new ArgumentNullException("Description can not be null");
-
-            }
-
-            List<string> items = description.items;
-
-            if (items.Count == 0)
-            {
-                throw new ArgumentException("The list must contain at least 1 option");
-            }
-
-            Console.WriteLine(description.Description);
-
-            int ix = 1;
-            foreach (string item in items)
-            {
-                Console.WriteLine($"{ix}. {items}");
+                Console.WriteLine($"{ix}. {item.Description}");
                 ix = ix + 1;
             }
+            Console.WriteLine("Pick an item!");
+            ix = GetUserInput(breakfast);
 
-            // Display Description (List of Options
-            // Loop through each answer and display it 
-            // Use GetUserInput method to get the user's response
-            return GetUserInput(description.items);
+            DisplayResult(breakfast, ix);
+
         }
 
-        public static int GetUserInput(List<string> items)
+        public static int GetUserInput(List<Food> items)
         {
             // Validate that there is at least 1 possible item.
             // If the list of items is empty, throw an exception
@@ -123,7 +102,6 @@ namespace APProject
                 throw new Exception($"At least one possible item does not exist.");
             }
 
-            Console.WriteLine("Select an Option");
             int userChoice;
 
             do
@@ -150,10 +128,17 @@ namespace APProject
 
             return userChoice - 1;
         }
-    }
-}
 
-public class BreakfastItem
+    
+
+        public static void DisplayResult(List<Food> breakfast, int userChoice)
+        {
+            Console.WriteLine($"${breakfast[userChoice].price}") ;
+        }
+    }
+
+
+public class Food
 {
     public string Description;
     public decimal price;
@@ -161,3 +146,4 @@ public class BreakfastItem
     public List<string> items = new List<string>();
 }
 
+}
