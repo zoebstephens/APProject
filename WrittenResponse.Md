@@ -126,7 +126,7 @@ Explains how the selected list manages complexity in your program code by
 explaining why your program code could not be written, or how it would be
 written differently, if you did not use the list.
 
-My list manages complexity by allowing the breakfast index to contain unlimited amounts of breakfast items instead of using multiple if/else statements to generate breakfast items. This makes the addition of more breakfast items simpler instead of having to write another variable for each one. 
+My list manages complexity by allowing the breakfast list to contain unlimited amounts of breakfast items instead of using multiple if/else statements to generate breakfast items. This makes the addition of more breakfast items simpler instead of having to write another variable for each one. 
 
 ## 3c.
 
@@ -232,7 +232,7 @@ Condition(s) tested by the first call: This tests that my method validates an in
 
 Condition(s) tested by the second call:
 
-This tests that the method runs when the input is not invalid. 
+This tests that the method runs when the input is valid. 
 
 ### 3d iii.
 
